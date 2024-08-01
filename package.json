@@ -1,0 +1,42 @@
+{
+  "name": "jane-language-support",
+  "displayName": "jane-language-support",
+  "description": "Support for the Jane and JOHN Languages",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "jane",
+      "aliases": ["Jane", "jane"],
+      "extensions": [".jane",".jn",".🩵"],
+      "configuration": "./jane-language-configuration.json",
+      "icon": {
+        "light": "./icons/janelogo.svg",
+        "dark": "./icons/janelogo.svg"
+      }
+    }, {
+      "id": "john",
+      "aliases": ["John", "john"],
+      "extensions": [".john",".🩷"],
+      "configuration": "./john-language-configuration.json",
+      "icon": {
+        "light": "./icons/johnlogo.svg",
+        "dark": "./icons/johnlogo.svg"
+      }
+    }],
+    "grammars": [{
+      "language": "jane",
+      "scopeName": "source.jane",
+      "path": "./syntaxes/jane.tmLanguage.json"
+    },{
+      "language": "john",
+      "scopeName": "source.john",
+      "path": "./syntaxes/john.tmLanguage"
+    }]
+  }
+}
